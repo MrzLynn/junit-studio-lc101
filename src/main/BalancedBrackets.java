@@ -1,7 +1,12 @@
 package main;
 
 
+import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
+
 public class BalancedBrackets {
+
     /**
      * The function BalancedBrackets should return true if and only if
      * the input string has a set of "balanced" brackets.
@@ -28,6 +33,8 @@ public class BalancedBrackets {
                 brackets++;
             } else if (ch == ']') {
                 brackets--;
+            } else if (ch != ']') {
+                brackets++;
             }
         }
         return brackets == 0;
